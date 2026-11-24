@@ -1,0 +1,162 @@
+:root {
+  --em-navy: #053340;
+  --em-navy-deep: #031f28;
+  --em-navy-mid: #0a3d4d;
+  --em-navy-soft: #0e4a5c;
+  --em-red: #e31e24;
+  --em-red-bright: #f02a30;
+  --em-red-soft: #ff4d52;
+  --em-white: #ffffff;
+  --em-off-white: #f2f5f7;
+  --em-muted: #a8c0c9;
+  --em-line: rgba(168, 192, 201, 0.35);
+  --em-glass: rgba(5, 51, 64, 0.72);
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "Outfit", sans-serif;
+
+  color-scheme: dark;
+  font-family: var(--font-body);
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--em-white);
+  background: var(--em-navy-deep);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--em-navy-deep);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px) scale(0.985);
+  filter: blur(2px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.32s;
+}
+
+.hero-enter {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter--d1 {
+  animation-delay: 0.12s;
+}
+
+.hero-enter--d2 {
+  animation-delay: 0.22s;
+}
+
+.hero-enter--d3 {
+  animation-delay: 0.34s;
+}
+
+.hero-enter--d4 {
+  animation-delay: 0.46s;
+}
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .hero-enter,
+  .hero__media,
+  .hero__media img,
+  .tri,
+  .product,
+  .coming-card,
+  .diff-item,
+  .project {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
