@@ -645,7 +645,19 @@ function App() {
             height={59}
           />
         </a>
-        <p>© {new Date().getFullYear()} Enterprise Mate. Redefining Enterprise Resource Planning.</p>
+        <div className="footer__meta">
+          <p>© {new Date().getFullYear()} Enterprise Mate. Redefining Enterprise Resource Planning.</p>
+          <p className="footer__credit">
+            Designed by{' '}
+            <a
+              href="https://www.linkedin.com/in/arnold-ndoro-a9b589292"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Anolah
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   )

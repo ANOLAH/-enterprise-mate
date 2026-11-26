@@ -1137,7 +1137,44 @@
   object-position: left center;
 }
 
+.footer__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  text-align: right;
+}
+
 .footer p {
+  margin: 0;
   color: var(--em-muted);
   font-size: 0.88rem;
+}
+
+.footer__credit {
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: rgba(168, 192, 201, 0.72);
+}
+
+.footer__credit a {
+  color: var(--em-red);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer__credit a:hover,
+.footer__credit a:focus-visible {
+  color: var(--em-red-bright);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+@media (max-width: 640px) {
+  .footer__meta {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
 }
