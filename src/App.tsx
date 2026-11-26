@@ -197,13 +197,13 @@ function App() {
       </a>
 
       <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
-        <a href="#top" aria-label="Enterprise Mate home">
+        <a className="nav__brand" href="#top" aria-label="Enterprise Mate home">
           <img
             className="nav__logo"
-            src="/assets/logo-on-dark.png"
+            src="/assets/logo-wordmark.png"
             alt="Enterprise Mate"
-            width={180}
-            height={24}
+            width={220}
+            height={72}
           />
         </a>
         <nav className="nav__links" aria-label="Primary">
@@ -275,9 +275,15 @@ function App() {
           <div className="tri tri--red tri--3" aria-hidden="true" />
 
           <div className="hero__content">
-            <p className="hero__brand hero-enter">
-              Enterprise <span>Mate</span>
-            </p>
+            <div className="hero__brand hero-enter">
+              <img
+                className="hero__logo"
+                src="/assets/logo-wordmark.png"
+                alt="Enterprise Mate"
+                width={420}
+                height={138}
+              />
+            </div>
             <div className="hero__title-rule hero-enter hero-enter--d1" aria-hidden="true" />
             <h1 className="hero__title hero-enter hero-enter--d2">
               Redefining Enterprise Resource Planning
@@ -630,13 +636,15 @@ function App() {
       </main>
 
       <footer className="footer">
-        <img
-          className="footer__logo"
-          src="/assets/logo-on-dark.png"
-          alt="Enterprise Mate"
-          width={160}
-          height={21}
-        />
+        <a className="footer__brand" href="#top" aria-label="Enterprise Mate home">
+          <img
+            className="footer__logo"
+            src="/assets/logo-wordmark.png"
+            alt="Enterprise Mate"
+            width={180}
+            height={59}
+          />
+        </a>
         <p>© {new Date().getFullYear()} Enterprise Mate. Redefining Enterprise Resource Planning.</p>
       </footer>
     </div>
