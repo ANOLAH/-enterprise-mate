@@ -118,6 +118,33 @@ const DIFFERENTIATORS = [
   },
 ] as const
 
+const PARTNERS = [
+  {
+    name: 'Microsoft',
+    label: 'Microsoft',
+    href: 'https://www.microsoft.com/',
+    domain: 'microsoft.com',
+  },
+  {
+    name: 'HaloITSM',
+    label: 'HaloITSM',
+    href: 'https://haloitsm.com/',
+    domain: 'haloitsm.com',
+  },
+  {
+    name: 'Pacific Certifications',
+    label: 'Pacific Cert',
+    href: 'https://pacificcert.com/',
+    domain: 'pacificcert.com',
+  },
+  {
+    name: 'eScan Security Solutions',
+    label: 'eScan',
+    href: 'https://www.escanav.com/en/',
+    domain: 'escanav.com',
+  },
+] as const
+
 const PROJECTS = [
   {
     client: 'Northern Region Water Board Malawi',
@@ -527,6 +554,53 @@ function App() {
                 operations, improve customer engagement, and drive business growth through advanced
                 technology solutions.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section partners" id="partners" aria-labelledby="partners-heading">
+          <div className="section__inner partners__intro reveal">
+            <p className="eyebrow">Alliances</p>
+            <h2 className="section-title" id="partners-heading">
+              <span className="accent">Strategic</span> Partners
+            </h2>
+            <p className="section-lead">
+              Technology and certification partners we work alongside to deliver trusted enterprise
+              solutions.
+            </p>
+          </div>
+          <div className="partners__marquee" aria-label="Strategic partner logos">
+            <div className="partners__track">
+              {[0, 1].map((copy) => (
+                <ul
+                  className="partners__group"
+                  key={copy}
+                  aria-hidden={copy === 1 ? true : undefined}
+                >
+                  {PARTNERS.map((partner) => (
+                    <li key={`${copy}-${partner.name}`}>
+                      <a
+                        className="partner-mark"
+                        href={partner.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={partner.name}
+                      >
+                        <img
+                          className="partner-mark__icon"
+                          src={`https://www.google.com/s2/favicons?domain=${partner.domain}&sz=64`}
+                          alt=""
+                          width={28}
+                          height={28}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span className="partner-mark__name">{partner.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ))}
             </div>
           </div>
         </section>

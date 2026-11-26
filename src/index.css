@@ -152,7 +152,8 @@ ul {
   .product,
   .coming-card,
   .diff-item,
-  .project {
+  .project,
+  .partners__track {
     transition: none !important;
     animation: none !important;
     opacity: 1 !important;
