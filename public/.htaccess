@@ -1,0 +1,12 @@
+# Apache (cPanel) — serve the SPA entry for unknown paths.
+# Vite copies this file from public/ into dist/.
+# Safe for hash-anchor marketing pages; also covers future client routes.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . index.html [L]
+</IfModule>
+
+# Prefer index.html for directory requests
+DirectoryIndex index.html
