@@ -1,8 +1,11 @@
 # Apache (cPanel) — serve the SPA entry for unknown paths.
 # Vite copies this file from public/ into dist/.
 # Safe for hash-anchor marketing pages; also covers future client routes.
+Options -MultiViews
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  # Always serve Search Console verification files as real files
+  RewriteRule ^google[0-9a-f]+\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . index.html [L]
