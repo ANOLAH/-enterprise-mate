@@ -724,11 +724,11 @@ function App() {
           <p className="footer__credit">
             Designed by{' '}
             <a
-              href="https://www.linkedin.com/in/arnold-ndoro-a9b589292"
+              href="https://www.linkedin.com/company/chase-creatives-zw/home/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Anolah
+              Chase Creatives
             </a>
           </p>
         </div>
